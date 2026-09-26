@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikingo Motos | Catálogo Custom & Llave en Mano</title>
+    <!-- Tailwind CSS CDN para estilizado rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vikingo-black': '#0B0B0B',
+                        'vikingo-red': '#E30613',
+                        'vikingo-gray': '#1A1A1A',
+                        'vikingo-steel': '#8A8A8A'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-vikingo-black text-white font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav class="border-b border-zinc-800 bg-vikingo-black sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-black tracking-wider text-vikingo-red">VIKINGO <span class="text-white">MOTOS</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider uppercase">
+                <a href="#catalogo" class="hover:text-vikingo-red transition">Catálogo</a>
+                <a href="#custom" class="hover:text-vikingo-red transition">Solución Llave en Mano</a>
+                <a href="#contacto" class="hover:text-vikingo-red transition">Contacto</a>
+            </div>
+            <a href="https://wa.me/51900000000" target="_blank" class="bg-vikingo-red hover:bg-red-700 text-white font-bold px-4 py-2 rounded uppercase text-xs tracking-widest transition flex items-center gap-2">
+                <i class="fa-brands font-bold fa-whatsapp text-lg"></i> Asesoría Motera
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-vikingo-gray py-20 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-vikingo-red text-sm font-bold uppercase tracking-widest">De Motero a Motero</span>
+            <h1 class="text-4xl md:text-6xl font-black uppercase my-4 tracking-tight">TU MOTO, <span class="text-vikingo-red">TU SELLO</span></h1>
+            <p class="max-w-2xl mx-auto text-zinc-400 text-base md:text-lg">
+                No vendemos motos de serie convencionales. Te entregamos una solución "Llave en Mano": te asesoramos, personalizamos tu motocicleta y te la entregamos lista para rodar en Arequipa.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo -->
+    <section id="catalogo" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <div>
+                <h2 class="text-2xl font-bold uppercase tracking-wider border-l-4 border-vikingo-red pl-3">Modelos & Customizaciones</h2>
+            </div>
+            <!-- Filtros -->
+            <div class="flex gap-2">
+                <button onclick="filtrar('todos')" class="px-4 py-2 bg-vikingo-red text-white text-xs uppercase font-bold rounded">Todos</button>
+                <button onclick="filtrar('scrambler')" class="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs uppercase font-bold rounded">Scrambler</button>
+                <button onclick="filtrar('caferacer')" class="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white text-xs uppercase font-bold rounded">Cafe Racer</button>
+            </div>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Producto 1 -->
+            <div class="card item scrambler bg-vikingo-gray rounded-lg overflow-hidden border border-zinc-800 hover:border-vikingo-red transition group">
+                <div class="relative overflow-hidden h-64 bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800" alt="Patagonia 169 Custom" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-vikingo-red text-white text-xs font-bold px-2 py-1 rounded uppercase">Llave en mano</span>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-vikingo-steel uppercase font-semibold">Submarca: Vikingo Motos</span>
+                    <h3 class="text-xl font-bold uppercase mt-1 mb-2">Patagonia 169 Custom</h3>
+                    <p class="text-zinc-400 text-sm mb-4">Estilo Scrambler / Neo-Retro con acabados mate, llantas mixtas y asiento artesanal en cuero.</p>
+                    <div class="flex justify-between items-center border-t border-zinc-800 pt-4">
+                        <span class="text-xs text-zinc-500">Arequipa, Perú</span>
+                        <a href="https://wa.me/51900000000?text=Hola,%20busco%20informaci%C3%B3n%20sobre%20la%20Patagonia%20169" class="bg-zinc-800 hover:bg-vikingo-red text-white text-xs font-bold px-3 py-2 rounded transition">Cotizar Custom</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="card item caferacer bg-vikingo-gray rounded-lg overflow-hidden border border-zinc-800 hover:border-vikingo-red transition group">
+                <div class="relative overflow-hidden h-64 bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800" alt="Cafe Racer 250" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-vikingo-red text-white text-xs font-bold px-2 py-1 rounded uppercase">Llave en mano</span>
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-vikingo-steel uppercase font-semibold">Submarca: Vikingo Motos</span>
+                    <h3 class="text-xl font-bold uppercase mt-1 mb-2">Vikingo Cafe Racer 250</h3>
+                    <p class="text-zinc-400 text-sm mb-4">Líneas agresivas estilo clásico de pista, espejos end-bar, luces LED direccionales y tubo de escape modificado.</p>
+                    <div class="flex justify-between items-center border-t border-zinc-800 pt-4">
+                        <span class="text-xs text-zinc-500">Arequipa, Perú</span>
+                        <a href="https://wa.me/51900000000?text=Hola,%20busco%20informaci%C3%B3n%20sobre%20la%20Cafe%20Racer%20250" class="bg-zinc-800 hover:bg-vikingo-red text-white text-xs font-bold px-3 py-2 rounded transition">Cotizar Custom</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="card item scrambler bg-vikingo-gray rounded-lg overflow-hidden border border-zinc-800 hover:border-vikingo-red transition group">
+                <div class="relative overflow-hidden h-64 bg-zinc-900">
+                    <img src="https://images.unsplash.com/photo-1525160354320-d8e92641c563?q=80&w=800" alt="Scrambler Urban" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs text-vikingo-steel uppercase font-semibold">Submarca: Vikingo Motos</span>
+                    <h3 class="text-xl font-bold uppercase mt-1 mb-2">Scrambler Urban 200</h3>
+                    <p class="text-zinc-400 text-sm mb-4">Diseñada para ciudad y trocha. Posición de manejo erguida con kit de accesorios Vikingo Motoshop.</p>
+                    <div class="flex justify-between items-center border-t border-zinc-800 pt-4">
+                        <span class="text-xs text-zinc-500">Arequipa, Perú</span>
+                        <a href="https://wa.me/51900000000?text=Hola,%20busco%20informaci%C3%B3n%20sobre%20la%20Scrambler%20Urban" class="bg-zinc-800 hover:bg-vikingo-red text-white text-xs font-bold px-3 py-2 rounded transition">Cotizar Custom</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Script para filtrado sencillo -->
+    <script>
+        function filtrar(categoria) {
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                if (categoria === 'todos' || item.classList.contains(categoria)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
